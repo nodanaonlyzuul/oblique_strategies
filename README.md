@@ -1,8 +1,7 @@
 # ObliqueStrategies
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/oblique_strategies`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby gem for delivering a [Oblique Strategies](https://en.wikipedia.org/wiki/Oblique_Strategies) in code and from the command line. With built in strategies, or bring
+your own newline-delimited file.
 
 ## Installation
 
@@ -22,7 +21,46 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Fast & Dirty With Built-in Cards
+
+```ruby
+require 'oblique_strategies'
+
+puts ObliqueStrategies.card
+# "Is it finished?"
+```
+
+### Multiple Cards
+
+The class method `card()` is a shortcut for instantiating an instance, and calling
+the `card()` instance method. If you need multiple cards, you can avoid
+re-reading the file by creating an instance of `ObliqueStrategies`.
+
+```ruby
+require 'oblique_strategies'
+
+deck =  ObliqueStrategies.new(path: '/path/to/your/file.txt')
+
+deck.card
+# "Cascades"
+
+deck.card
+# "Cut a vital connection"
+```
+
+### Bring Your Own
+
+```ruby
+require 'oblique_strategies'
+
+deck =  ObliqueStrategies.new(path: '/path/to/your/file.txt')
+
+deck.card
+# "This does not bode well"
+
+deck.card
+# "Maybe later"
+```
 
 ## Development
 
@@ -32,7 +70,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/oblique_strategies. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/nodanaonlyzuul/oblique_strategies>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -41,3 +79,7 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the ObliqueStrategies project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/oblique_strategies/blob/master/CODE_OF_CONDUCT.md).
+
+## Credit
+
+I've used the strategies from [ptigas/oblique-strategies](https://github.com/ptigas/oblique-strategies/).
