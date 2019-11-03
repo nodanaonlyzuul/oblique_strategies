@@ -7,12 +7,8 @@ class ObliqueStrategies
 
   DEFAULT_STRATEGY_PATH = File.join(File.absolute_path(__dir__), '..', 'resources', 'text_files', 'edition-01.txt')
 
-  # The argument is an options hash, not true named arguments :(
-  # That's intentional - it gives us 1.9 support :-)
-  def initialize(options = {})
-    default_options = {path: DEFAULT_STRATEGY_PATH}
-    options = default_options.merge(options)
-    @deck = File.readlines(options[:path]).map(&:chomp).map(&:strip)
+  def initialize(path: DEFAULT_STRATEGY_PATH)
+    @deck = File.readlines(path).map(&:chomp).map(&:strip)
   end
 
   # Draw a random card from the Array
