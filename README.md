@@ -1,7 +1,7 @@
 # ObliqueStrategies
 
 A Ruby gem for delivering a [Oblique Strategies](https://en.wikipedia.org/wiki/Oblique_Strategies) in code and from the command line. With built in strategies, or bring
-your own newline-delimited file.
+your own newline-delimited file. See the [.travis.yml]('./.travis.yml') file and the [build status](https://travis-ci.com/nodanaonlyzuul/oblique_strategies) for tested Ruby versions.
 
 ## Installation
 
