@@ -39,7 +39,7 @@ re-reading the file by creating an instance of `ObliqueStrategies`.
 ```ruby
 require 'oblique_strategies'
 
-deck =  ObliqueStrategies.new(path: '/path/to/your/file.txt')
+deck =  ObliqueStrategies.new()
 
 deck.card
 # "Cascades"
