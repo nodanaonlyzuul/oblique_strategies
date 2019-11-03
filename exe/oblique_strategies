@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'oblique_strategies'
+puts ObliqueStrategies.card
